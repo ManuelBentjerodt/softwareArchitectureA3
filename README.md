@@ -25,4 +25,3 @@ flask --app books db revision '<MESSAGE>'
 ```bash
 flask --app books db upgrade
 ```
-# softwareArchitectureA3
