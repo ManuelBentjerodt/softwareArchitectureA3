@@ -6,7 +6,7 @@ import csv
 
 from models import Author, Book, Rating
 from db import db
-import create_app
+from . import create_app
 
 def load_authors():
     with open('database_files/authors.csv', 'r') as file:
