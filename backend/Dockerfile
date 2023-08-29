@@ -1,7 +1,6 @@
 FROM python:3.11-alpine as dev
 WORKDIR /app
-# Instala las dependencias de Python
-COPY requirements.txt /app/
+
 RUN pip install flask Flask-Alembic Flask-SQLAlchemy psycopg2-binary python-dotenv
 
 FROM python:3.11-alpine as build
