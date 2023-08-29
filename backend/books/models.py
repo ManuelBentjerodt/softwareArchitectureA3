@@ -1,4 +1,4 @@
-from db import db
+from books.db import db
 import sqlalchemy as sa
 
 class Author(db.Model):
