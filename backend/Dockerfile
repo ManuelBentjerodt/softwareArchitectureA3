@@ -1,6 +1,6 @@
 FROM python:3.11-alpine as dev
 WORKDIR /app
-RUN pip install flask Flask-Alembic Flask-SQLAlchemy psycopg2-binary
+RUN pip install flask Flask-Alembic Flask-SQLAlchemy psycopg2-binary python-dotenv
 
 FROM python:3.11-alpine as build
 WORKDIR /build
