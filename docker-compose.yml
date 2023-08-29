@@ -6,6 +6,7 @@ services:
       target: dev
     container_name: backend
     command: flask --app books run --host 0.0.0.0 --debug
+    env_file: .env
     volumes:
       - ./backend:/app
       - ./database_files:/app/database_files

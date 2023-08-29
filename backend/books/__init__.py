@@ -18,7 +18,7 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 DB_PROTOCOL = os.getenv("DB_PROTOCOL")
-
+print(DB_PROTOCOL)
 DB_STRING_CONNECTION = f"{DB_PROTOCOL}://{DB_USER}:{DB_PASSWORD}@{DB_URL}/{DB_NAME}"
 
 
