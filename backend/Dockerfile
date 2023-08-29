@@ -10,6 +10,7 @@ RUN pip install build && \
 
 FROM python:3.11-alpine as prod
 RUN pip install -U pip
+RUN pip install python-dotenv
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 WORKDIR /home/appuser
