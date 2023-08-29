@@ -3,3 +3,4 @@ dumps/
 parse.ipynb
 **/__pycache__/
 .vscode/
+**/.env
