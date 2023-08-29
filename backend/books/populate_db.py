@@ -1,6 +1,6 @@
 import csv
 import sys
-sys.path.append("/app")
+sys.path.append('/home/ec2-user/softwareArchitectureA3/backend')
 
 from books.models import Author, Book, Rating
 from books.db import db
