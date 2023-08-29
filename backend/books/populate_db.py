@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
-from books.models import Author, Book, Rating
-from books.db import db
+from models import Author, Book, Rating
+from db import db
 from books import create_app
 
 def load_authors():
