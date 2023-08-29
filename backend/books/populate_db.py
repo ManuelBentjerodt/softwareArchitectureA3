@@ -1,6 +1,8 @@
 import csv
 import sys
-sys.path.append("/app")
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 
 from books.models import Author, Book, Rating
 from books.db import db
