@@ -6,29 +6,13 @@ from .db import db
 from books.models import Author, Book
 from itertools import chain
 
-import os
-from dotenv import load_dotenv
-import pathlib
-
-dotenv_path = pathlib.Path('../../..') / '.env'
-load_dotenv(dotenv_path=dotenv_path)
-
-DB_URL = os.getenv("DB_URL")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_NAME = os.getenv("DB_NAME")
-DB_PROTOCOL = os.getenv("DB_PROTOCOL")
-
-DB_STRING_CONNECTION = f"{DB_PROTOCOL}://{DB_USER}:{DB_PASSWORD}@{DB_URL}/{DB_NAME}"
-
-
 
 def create_app():
     # create and configure the app
     app = Flask(__name__)
     
     
-    app.config["SQLALCHEMY_DATABASE_URI"] = DB_STRING_CONNECTION
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@db/postgres"
     alembic = Alembic()
 
     db.init_app(app)
