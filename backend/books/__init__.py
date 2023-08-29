@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template, url_for
 from werkzeug.middleware.proxy_fix import ProxyFix
 from flask_alembic import Alembic
-import db
+from .db import db
 from books.models import Author, Book
 from itertools import chain
 

@@ -1,12 +1,10 @@
 import csv
-# import sys
-# import os
-# sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import sys
+sys.path.append("/app")
 
-
-from models import Author, Book, Rating
-from db import db
-from __init__ import create_app
+from books.models import Author, Book, Rating
+from books.db import db
+from books import create_app
 
 def load_authors():
     with open('database_files/authors.csv', 'r') as file:
